@@ -1,0 +1,199 @@
+* {box-sizing:border-box;}
+
+body {
+    padding: 1%;
+    background-image: url(/images/cool-background.png);
+}
+
+.col, .col-5 {
+    text-align: center;
+}
+
+.result {
+    color: #FFCC00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-family: 'Anton', sans-serif;
+    perspective: 800px;
+}
+
+.result-inner-vs {
+
+}
+
+.result-inner-btn {
+
+}
+
+.card {
+  width: 300px;
+  height: 420px;
+  position: relative;
+  margin: 30% 50%;
+  text-align: left;
+  perspective: 800px;
+  background-image: url(/images/cool-background.png);
+}
+
+.card_name {
+    font-size: 2em;
+    font-family: 'Bangers', cursive;
+    text-align: center;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1.2s;
+  border: double 10px dimgray;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.front {
+  background-color: #000033;
+  color: #FFCC00;
+  z-index: 3;
+}
+
+.back {
+  background-color: #000033;  
+  color: #FFCC00;
+  transform: rotatey(180deg);
+  line-height: 270%;
+  font-size: 1.1em;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+}
+
+.card_picture {
+  width: 100%;
+  height: 90%;
+}
+
+.card_table {
+  width: 100%;
+  border: thin gray solid;
+}
+
+/*skill bars*/
+.skill-item {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.skill-container {
+  background: #353b48;
+  display: block;       
+  height: 2px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #2187e7b3;
+}
+
+.skill-container span {
+  float: left;  
+  height: 2px;
+  background: #2187e7;
+}
+
+.intelligence {
+    width: 0%;
+    animation: intelligence 2s;
+} 
+
+.strength {
+    width: 0%;
+    animation: strength 2s;
+} 
+
+.speed {
+    width: 0%;
+    animation: speed 2s;
+} 
+
+.durability {
+    width: 0%;
+    animation: durability 2s;
+}
+
+.power {
+    width: 0%;
+    animation: power 2s;
+} 
+
+.combat {
+    width: 0%;
+    animation: combat 2s;
+}
+
+.card:hover .front {
+  transform: rotatey(-180deg);
+}
+
+.card:hover .back {
+  transform: rotatey(0deg);
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #FFCC00;
+  background-color: #000033;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-size: 16px;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  background-color: #000066;
+  outline: none; 
+}
+
+.button:focus {
+    outline: none;      
+}
+
+.button:active {
+  background-color: #000066;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  outline: none;
+}
+
+
+
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
