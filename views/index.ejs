@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <title>Superhero Arena</title>
     </head>
-    <body>
+    <body onload="init()">
         <div class="container-fluid">
             <div class="row">
                 <div id= "player-1" class="player-panel-1 col-5">
@@ -24,49 +24,46 @@
                         <div class = "back">
                             <p class= "skill-item">Intelligence</p>
                             <div class="skill-container">
-                                <span style = "width: ${data.powerstats.intelligence}%; 
+                                <span style = "width: ${data.powerstats.intelligence}%;
                                 animation: intelligence 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Strength</p>
                             <div class="skill-container">
-                                <span style = "width: ${data.powerstats.strength}%; 
+                                <span style = "width: ${data.powerstats.strength}%;
                                 animation: strength 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Speed</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.speed}%; 
+                                <span style = "width: ${data.powerstats.speed}%;
                                 animation: speed 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Durability</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.durability}%; 
+                                <span style = "width: ${data.powerstats.durability}%;
                                 animation: durability 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Power</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.power}%; 
+                                <span style = "width: ${data.powerstats.power}%;
                                 animation: power 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Combat</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.combat}%; 
+                                <span style = "width: ${data.powerstats.combat}%;
                                 animation: combat 2s;" class="skills"></span>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="result col">
                     <div class="row">
-                    <div class="result-inner-vs col">V/S</div>
-                    <div class="w-100"></div>
-                    <div class="result-inner-btn col">
-                        <button class="button">SHUFFLE</button>
-                    </div>
+                        <div class="col">V/S</div>
+                        <div class="w-100"></div>
+                        <div class="col">
+                            <button class="button">SHUFFLE</button>
+                        </div>
+                        <div class="w-100"></div>
+                        <div style = "height: 10px; visibility: hidden;" class="col"></div>
                     </div>
                 </div>
                 <div id= "player-2" class="player-panel-2 col-5">
@@ -78,42 +75,73 @@
                         <div class = "back">
                             <p class= "skill-item">Intelligence</p>
                             <div class="skill-container">
-                                <span style = "width: ${data.powerstats.intelligence}%; 
+                                <span style = "width: ${data.powerstats.intelligence}%;
                                 animation: intelligence 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Strength</p>
                             <div class="skill-container">
-                                <span style = "width: ${data.powerstats.strength}%; 
+                                <span style = "width: ${data.powerstats.strength}%;
                                 animation: strength 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Speed</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.speed}%; 
+                                <span style = "width: ${data.powerstats.speed}%;
                                 animation: speed 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Durability</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.durability}%; 
+                                <span style = "width: ${data.powerstats.durability}%;
                                 animation: durability 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Power</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.power}%; 
+                                <span style = "width: ${data.powerstats.power}%;
                                 animation: power 2s;" class="skills"></span>
                             </div>
-
                             <p class= "skill-item">Combat</p>
                             <div class="skill-container">
-                               <span style = "width: ${data.powerstats.combat}%; 
+                                <span style = "width: ${data.powerstats.combat}%;
                                 animation: combat 2s;" class="skills"></span>
-                            </div>                            
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div style = "visibility: hidden;" class="col"> Hidden Div </div>
+                <div class="col-6">
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">R1</th>
+                                <th scope="col">R2</th>
+                                <th scope="col">R3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Player 1</th>
+                                <td class="r1-p1-total"></td>
+                                <td class="r2-p1-total">65</td>
+                                <td class="r3-p1-total">75</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Player 2</th>
+                                <td class="r1-p2-total">56</td>
+                                <td class="r2-p2-total">87</td>
+                                <td class="r3-p2-total">94</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Winner</th>
+                                <td>Player 1</td>
+                                <td>Player 2</td>
+                                <td>Player 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style = "visibility: hidden;" class="col"> Hidden Div </div>
             </div>
         </div>
         <!-- Optional JavaScript -->

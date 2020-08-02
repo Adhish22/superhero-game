@@ -19,13 +19,39 @@ body {
     perspective: 800px;
 }
 
-.result-inner-vs {
+/*scoreboard*/
 
+table {
+    box-shadow: 10px 10px 5px grey;
 }
 
-.result-inner-btn {
-
+thead tr th {
+    font-size: 1.5rem;
+    color: #FFCC00;
+    max-width: 5px;
+    text-align: center;
+    background-color: #000033;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
 }
+
+tr th {
+    color: #FFCC00;
+    font-size: 1.5rem;
+    max-width: 5px;
+    text-align: center;
+    background-color: #000033;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+}
+
+td {
+    max-width: 3px;
+    text-align: center;
+    background-color: #000033;
+}
+
+/*scoreboard*/
 
 .card {
   width: 300px;
@@ -145,7 +171,7 @@ body {
 
 .button {
   display: inline-block;
-  padding: 15px 25px;
+  padding: 12px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -156,7 +182,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 9px #999;
   font-size: 16px;
-  font-family: 'Bangers', cursive;
+  font-family: 'Anton', sans-serif;
   letter-spacing: 2px;
 }
 
